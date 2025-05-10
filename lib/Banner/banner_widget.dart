@@ -28,15 +28,18 @@ class _BannerWidgetState extends State<BannerWidget> {
       ),
       child: BlocBuilder<BannerBloc, BannerState>(
         builder: (context, state) {
-          return PageView(
-            controller: _pageController,
-            onPageChanged: (index) {
-              context.read<BannerBloc>().add(BannerChangePage(index));
-            },
-            children: [
-              Image.asset('assets/images/ad1.png',fit: BoxFit.fitWidth),
-              Image.asset('assets/images/ad2.png',fit: BoxFit.fitWidth),
-            ],
+          return SizedBox(
+            height: MediaQuery.of(context).size.height * 0.3,
+            child: PageView(
+              controller: _pageController,
+              onPageChanged: (index) {
+                context.read<BannerBloc>().add(BannerChangePage(index));
+              },
+              children: [
+                Image.asset('assets/images/ad1.png', fit: BoxFit.fitWidth),
+                Image.asset('assets/images/ad2.png', fit: BoxFit.fitWidth),
+              ],
+            ),
           );
         },
       ),
