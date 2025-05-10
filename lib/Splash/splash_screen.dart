@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     _init();
   }
-// d
+// dd
   void _init() async {
     await Future.delayed(Duration(seconds: 3));
     Navigator.pushReplacement(
