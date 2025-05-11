@@ -17,7 +17,7 @@ class _BannerWidgetState extends State<BannerWidget> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => BannerBloc(
-        pageCount: 2,
+        pageCount: 3,
         onPageChanged: (index) {
           _pageController.animateToPage(
             index,
@@ -29,7 +29,7 @@ class _BannerWidgetState extends State<BannerWidget> {
       child: BlocBuilder<BannerBloc, BannerState>(
         builder: (context, state) {
           return SizedBox(
-            height: MediaQuery.of(context).size.height * 0.3,
+            height: MediaQuery.of(context).size.height * 0.21,
             child: PageView(
               controller: _pageController,
               onPageChanged: (index) {
@@ -38,6 +38,7 @@ class _BannerWidgetState extends State<BannerWidget> {
               children: [
                 Image.asset('assets/images/ad1.png', fit: BoxFit.fitWidth),
                 Image.asset('assets/images/ad2.png', fit: BoxFit.fitWidth),
+                Image.asset('assets/images/ad3.png', fit: BoxFit.fitWidth),
               ],
             ),
           );
