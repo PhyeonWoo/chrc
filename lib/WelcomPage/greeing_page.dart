@@ -165,7 +165,7 @@ class GreetingPage extends StatelessWidget {
             const Text(
               '할렐루야! 홈페이지 방문을 환영합니다.',
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 26,
                 fontWeight: FontWeight.bold,
                 color: Colors.blueAccent,
               ),
