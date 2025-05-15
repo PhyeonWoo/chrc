@@ -1,4 +1,6 @@
 import 'package:chrc/WelcomPage/directions_page.dart';
+import 'package:chrc/WelcomPage/greeing_page.dart';
+import 'package:chrc/WelcomPage/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -20,14 +22,17 @@ class WelcomAppBar extends StatelessWidget implements PreferredSizeWidget {
               TextButton(
                 onPressed: () {
                   Get.back();
-                  Get.to(() => const Direction());
+                  Get.to(() => const GreetingPage());
                 },
-                child: const Text("test1",
+                child: const Text("인사말",
                     style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
               ),
               TextButton(
-                onPressed: () {},
-                child: const Text("test2",
+                onPressed: () {
+                  Get.back();
+                  Get.to(() => Register());
+                },
+                child: const Text("새가족",
                     style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
               ),
               TextButton(
