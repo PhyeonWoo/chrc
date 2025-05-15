@@ -18,7 +18,7 @@ class Register extends StatelessWidget{
             Text(
               "새가족등록안내",
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 25,
                 fontWeight: FontWeight.bold,
                 color: Colors.black,
               ),
