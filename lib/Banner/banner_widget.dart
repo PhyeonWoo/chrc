@@ -37,7 +37,7 @@ class _BannerWidgetState extends State<BannerWidget> {
               },
               children: [
                 Image.asset('assets/images/ad1.png', fit: BoxFit.fitWidth),
-                Image.asset('assets/images/ad2.png', fit: BoxFit.fitWidth),
+                Image.asset('assets/images/ad3.png', fit: BoxFit.fitWidth),
                 Image.asset('assets/images/ad3.png', fit: BoxFit.fitWidth),
               ],
             ),

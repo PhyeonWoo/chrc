@@ -1,3 +1,4 @@
+import 'package:chrc/MainPage/main_page.dart';
 import 'package:chrc/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -25,12 +26,12 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     _init();
   }
-// dd
+
   void _init() async {
     await Future.delayed(Duration(seconds: 3));
     Navigator.pushReplacement(
         context,
-    MaterialPageRoute(builder: (context) => MyApp())
+    MaterialPageRoute(builder: (context) => MainHome())
     );
   }
 

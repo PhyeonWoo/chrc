@@ -32,14 +32,15 @@ dependencies:
     sdk: flutter
   get:
   flutter_bloc:
-  url_launcher:
   cupertino_icons: ^1.0.2
+
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  url_launcher: ^6.3.1 # ⬅️ 이 줄 추가 (최신 안정 버전)
 
 
 flutter:
@@ -50,7 +51,8 @@ flutter:
     - assets/images/ad2.png
     - assets/images/ad3.png
     - assets/images/home_logo.png
-    - assets/images/pastor.png
+    - assets/images/pastor_img.png
+    - assets/images/register_family.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
