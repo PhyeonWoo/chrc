@@ -3,6 +3,7 @@ import 'package:chrc/WelcomPage/greeing_page.dart';
 import 'package:chrc/WelcomPage/register_page.dart';
 import 'package:chrc/WelcomPage/time_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_naver_map/flutter_naver_map.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
@@ -45,12 +46,21 @@ class WelcomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
               ),
               TextButton(
-                onPressed: () {
-                  Get.back();
-                  Get.to(() => Directions());
+                onPressed: () async {
+                  try {
+                    await NaverMapSdk.instance.initialize(
+                      clientId: "ckwq0q1fl6",
+                      onAuthFailed: (ex) {
+                        debugPrint("************** 네이버맵 인증오류 : $ex **************");
+                      },
+                    );
+                    Get.to(() => Directions());
+                  } catch (e) {
+                    debugPrint("NaverMap initialization error : $e");
+                  }
                 },
-                child: const Text("오시는 길",
-                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                child: const Text("오시는길",
+                  style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold)),
               ),
             ],
           ),
