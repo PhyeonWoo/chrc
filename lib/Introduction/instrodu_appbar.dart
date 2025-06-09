@@ -1,3 +1,4 @@
+import 'package:chrc/Introduction/introdu_vision.dart';
 import 'package:chrc/WelcomPage/greeing_page.dart';
 import 'package:chrc/WelcomPage/register_page.dart';
 import 'package:chrc/WelcomPage/time_page.dart';
@@ -22,7 +23,7 @@ class IntroduAppBar extends StatelessWidget implements PreferredSizeWidget {
             TextButton(
               onPressed: () {
                 Get.back();
-                Get.to(() => const GreetingPage());
+                Get.to(() => Vision());
               },
               child: const Text(
                 "목회비전",
